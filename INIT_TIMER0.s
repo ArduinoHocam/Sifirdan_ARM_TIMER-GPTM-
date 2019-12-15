@@ -31,7 +31,7 @@ NVIC_PRI4			EQU 0xE000E410 ; IRQ 16 to 19 Priority Register
 
 INIT_TIMER0 PROC
 
-										LDR R1,=SYSCTL_RCGCTIMER ;clock for timer
+					LDR R1,=SYSCTL_RCGCTIMER ;clock for timer
 					LDR R0,[R1]
 					ORR R0,#0x01
 					STR R0,[R1]
@@ -60,7 +60,7 @@ INIT_TIMER0 PROC
 					MOV R2,#0x4F
 					STR R2,[R1]
 					
-					LDR R1, =TIMER0_IMR ; enable timeout interrupt
+					LDR R1, =TIMER0_IMR ;enable timeout interrupt
 					MOV R2, #0x01
 					STR R2, [R1]
 							
